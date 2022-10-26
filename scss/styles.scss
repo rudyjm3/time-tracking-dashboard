@@ -5,5 +5,94 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
    height: 100vh;
+}
+
+.main-container {
+   display: grid;
+   grid-template-columns: 25%;
+   grid-template-rows: auto;
+   grid-template-areas: 
+   "profile-card work-card play-card study-card"
+   "profile-card exercise-card social-card self-care-card";
+   width: 80%;
+   gap: 25px;
+
+   // Cards
+   .card {
+      border-radius: 15px;
+      border: 2px solid yellow;
+      width: 100%;
+      height: 200px;
+      background-color: pink;
+
+      .inner-card {
+         width: 100%;
+         padding: 25px;
+         border-radius: 15px;
+         background-color: var(--Dark-blue);
+
+         .image-wrapper {
+            width: 100%;
+            margin-bottom: 35px;
+
+            .profile-img {
+               width: 40%;
+               height: auto;
+               border-radius: 50px;
+               border: 3px solid white;
+            }
+         }
+         h3 {
+            font-size: .8rem;
+            font-weight: 300;
+            margin-bottom: 8px;
+            color: var(--Pale-Blue);
+         }
+         .user-name {
+            font-size: 2rem;
+            font-weight: 300;
+         }
+      }
+   }
+   .profile-card {
+      grid-area: profile-card;
+      height: 100%;
+      .inner-card {
+         background-color: var(--Blue);
+         padding-bottom: 35px;
+      }
+      .inner-card:nth-child(-1n + 6) {
+         // color: red;
+      }
+   }
+   .work-card {
+      grid-area: work-card;
+   }
+   .play-card {
+      grid-area: play-card;
+   }
+   .study-card {
+      grid-area: study-card;
+   }
+   .exercise-card {
+      grid-area: exercise-card;
+   }
+   .social-card {
+      grid-area: social-card;
+   }
+   .self-care-card {
+      grid-area: self-care-card;
+   }
+}  
+
+// Footer
+.attribution {
+   position: absolute;
+   bottom: 0;
+   align-self: flex-end;
+   width: 100%;
+   padding: 15px 0;
+   background-color: #333;
 }

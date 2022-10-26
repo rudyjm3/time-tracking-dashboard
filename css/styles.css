@@ -19,7 +19,7 @@
   color: #f6f6f6;
   /*=== Primary Colors ===*/
   --Blue: hsl(246, 80%, 60%);
-  --Light-red:hsl(15, 100%, 70%); /* (work) */
+  --Orange-red:hsl(15, 100%, 70%); /* (work) */
   --Soft-blue:hsl(195, 74%, 62%); /* (play) */
   --Light-red:hsl(348, 100%, 68%); /* (study) */
   --Lime-green:hsl(145, 58%, 55%); /* (exercise) */
@@ -38,5 +38,83 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "profile-card work-card play-card study-card" "profile-card exercise-card social-card self-care-card";
+  width: 80%;
+  gap: 25px;
+}
+.main-container .card {
+  border-radius: 15px;
+  border: 2px solid yellow;
+  width: 100%;
+  height: 200px;
+  background-color: pink;
+}
+.main-container .card .inner-card {
+  width: 100%;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: var(--Dark-blue);
+}
+.main-container .card .inner-card .image-wrapper {
+  width: 100%;
+  margin-bottom: 35px;
+}
+.main-container .card .inner-card .image-wrapper .profile-img {
+  width: 40%;
+  height: auto;
+  border-radius: 50px;
+  border: 3px solid white;
+}
+.main-container .card .inner-card h3 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: var(--Pale-Blue);
+}
+.main-container .card .inner-card .user-name {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.main-container .profile-card {
+  grid-area: profile-card;
+  height: 100%;
+}
+.main-container .profile-card .inner-card {
+  background-color: var(--Blue);
+  padding-bottom: 35px;
+}
+.main-container .work-card {
+  grid-area: work-card;
+}
+.main-container .play-card {
+  grid-area: play-card;
+}
+.main-container .study-card {
+  grid-area: study-card;
+}
+.main-container .exercise-card {
+  grid-area: exercise-card;
+}
+.main-container .social-card {
+  grid-area: social-card;
+}
+.main-container .self-care-card {
+  grid-area: self-care-card;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  align-self: flex-end;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #333;
 }/*# sourceMappingURL=styles.css.map */
