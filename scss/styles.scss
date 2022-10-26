@@ -21,6 +21,7 @@ body {
 
    // Cards
    .card {
+      position: relative;
       border-radius: 15px;
       border: 2px solid yellow;
       width: 100%;
@@ -28,6 +29,8 @@ body {
       background-color: pink;
 
       .inner-card {
+         position: absolute;
+         bottom: 0;
          width: 100%;
          padding: 25px;
          border-radius: 15px;
@@ -35,7 +38,7 @@ body {
 
          .image-wrapper {
             width: 100%;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
 
             .profile-img {
                width: 40%;
@@ -47,24 +50,50 @@ body {
          h3 {
             font-size: .8rem;
             font-weight: 300;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             color: var(--Pale-Blue);
          }
          .user-name {
             font-size: 2rem;
             font-weight: 300;
+            margin-bottom: 25px;
+         }
+         //All inner cards except 1st(profile)
+         .card-header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card-title {
+               font-size: 15px;
+            }
+            .card-options {
+               display: flex;
+               align-items: center;
+               cursor: pointer;
+            }
          }
       }
    }
    .profile-card {
       grid-area: profile-card;
       height: 100%;
+      background-color: var(--Dark-blue);
       .inner-card {
+         position: relative;
          background-color: var(--Blue);
          padding-bottom: 35px;
       }
-      .inner-card:nth-child(-1n + 6) {
-         // color: red;
+      ul {
+         list-style: none;
+         margin-top: 15px;
+         li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            cursor: pointer;
+         }
+
       }
    }
    .work-card {

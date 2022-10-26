@@ -51,6 +51,7 @@ body {
   gap: 25px;
 }
 .main-container .card {
+  position: relative;
   border-radius: 15px;
   border: 2px solid yellow;
   width: 100%;
@@ -58,6 +59,8 @@ body {
   background-color: pink;
 }
 .main-container .card .inner-card {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   padding: 25px;
   border-radius: 15px;
@@ -65,7 +68,7 @@ body {
 }
 .main-container .card .inner-card .image-wrapper {
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 .main-container .card .inner-card .image-wrapper .profile-img {
   width: 40%;
@@ -76,20 +79,46 @@ body {
 .main-container .card .inner-card h3 {
   font-size: 0.8rem;
   font-weight: 300;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: var(--Pale-Blue);
 }
 .main-container .card .inner-card .user-name {
   font-size: 2rem;
   font-weight: 300;
+  margin-bottom: 25px;
+}
+.main-container .card .inner-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .card .inner-card .card-header .card-title {
+  font-size: 15px;
+}
+.main-container .card .inner-card .card-header .card-options {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .main-container .profile-card {
   grid-area: profile-card;
   height: 100%;
+  background-color: var(--Dark-blue);
 }
 .main-container .profile-card .inner-card {
+  position: relative;
   background-color: var(--Blue);
   padding-bottom: 35px;
+}
+.main-container .profile-card ul {
+  list-style: none;
+  margin-top: 15px;
+}
+.main-container .profile-card ul li {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
 .main-container .work-card {
   grid-area: work-card;
