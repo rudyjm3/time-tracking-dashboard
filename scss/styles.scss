@@ -16,7 +16,7 @@ body {
    grid-template-areas: 
    "profile-card work-card play-card study-card"
    "profile-card exercise-card social-card self-care-card";
-   width: 80%;
+   width: 75%;
    gap: 25px;
 
    // Cards
@@ -26,7 +26,9 @@ body {
       // border: 2px solid yellow;
       width: 100%;
       height: 200px;
-      background-color: pink;
+      background-position: top 0% right 10%;
+      background-repeat: no-repeat;
+      background-size: 31%;
 
       .inner-card {
          position: absolute;
@@ -36,6 +38,7 @@ body {
          border-radius: 15px;
          background-color: var(--Dark-blue);
          cursor: pointer;
+         // opacity: 0.2;
 
          .image-wrapper {
             width: 100%;
@@ -94,6 +97,7 @@ body {
       grid-area: profile-card;
       height: 100%;
       background-color: var(--Dark-blue);
+      padding-bottom: 20px;
       .inner-card {
          position: relative;
          background-color: var(--Blue);
@@ -105,39 +109,55 @@ body {
       }
       ul {
          list-style: none;
-         margin-top: 15px;
+         margin-top: 20px;
          li {
             padding-left: 25px;
-            margin-bottom: 10px;
-            font-size: 15px;
-            cursor: pointer;
-         }
+            margin-bottom: 15px;
 
+            p {
+               width: min-content;
+               font-size: 15px;
+               color: var(--Desaturated-blue);
+               cursor: pointer; 
+            }
+            p:hover {
+               color: inherit;
+            }
+            .active-p {
+               color: inherit;
+            }
+         }
       }
    }
    .work-card {
       grid-area: work-card;
       background-color: var(--Orange-red);
+      background-image: url("/images/icon-work.svg");
    }
    .play-card {
       grid-area: play-card;
       background-color: var(--Soft-blue);
+      background-image: url("/images/icon-play.svg");
    }
    .study-card {
       grid-area: study-card;
       background-color: var(--Light-red);
+      background-image: url("/images/icon-study.svg");
    }
    .exercise-card {
       grid-area: exercise-card;
       background-color: var(--Lime-green);
+      background-image: url("/images/icon-exercise.svg");
    }
    .social-card {
       grid-area: social-card;
       background-color: var(--Violet);
+      background-image: url("/images/icon-social.svg");
    }
    .self-care-card {
       grid-area: self-care-card;
       background-color: var(--Soft-orange);
+      background-image: url("/images/icon-self-care.svg");
    }
 }  
 
