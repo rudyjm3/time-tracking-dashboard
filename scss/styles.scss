@@ -23,7 +23,7 @@ body {
    .card {
       position: relative;
       border-radius: 15px;
-      border: 2px solid yellow;
+      // border: 2px solid yellow;
       width: 100%;
       height: 200px;
       background-color: pink;
@@ -35,6 +35,7 @@ body {
          padding: 25px;
          border-radius: 15px;
          background-color: var(--Dark-blue);
+         cursor: pointer;
 
          .image-wrapper {
             width: 100%;
@@ -63,9 +64,11 @@ body {
             display:flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
 
             .card-title {
                font-size: 15px;
+               font-weight: 500;
             }
             .card-options {
                display: flex;
@@ -73,6 +76,13 @@ body {
                cursor: pointer;
             }
          }
+         .card-hours {
+            font-size: 2.5rem;
+            font-weight: 300;
+         }
+      }
+      .inner-card:hover {
+         background-color: #363b7c;
       }
    }
    .profile-card {
@@ -83,6 +93,10 @@ body {
          position: relative;
          background-color: var(--Blue);
          padding-bottom: 35px;
+      }
+      .inner-card:hover {
+         background-color: var(--Blue);
+         cursor: default;
       }
       ul {
          list-style: none;
@@ -98,21 +112,27 @@ body {
    }
    .work-card {
       grid-area: work-card;
+      background-color: var(--Orange-red);
    }
    .play-card {
       grid-area: play-card;
+      background-color: var(--Soft-blue);
    }
    .study-card {
       grid-area: study-card;
+      background-color: var(--Light-red);
    }
    .exercise-card {
       grid-area: exercise-card;
+      background-color: var(--Lime-green);
    }
    .social-card {
       grid-area: social-card;
+      background-color: var(--Violet);
    }
    .self-care-card {
       grid-area: self-care-card;
+      background-color: var(--Soft-orange);
    }
 }  
 

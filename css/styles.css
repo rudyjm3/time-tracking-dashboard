@@ -27,7 +27,7 @@
   --Soft-orange:hsl(43, 84%, 65%); /* (self care) */
   /*=== Neutral Colors ===*/
   --Very-dark-blue: hsl(226, 43%, 10%);
-  --Dark-blue: hsl(235, 46%, 20%);
+  --Dark-blue: hsl(236, 45%, 20%);
   --Desaturated-blue: hsl(235, 45%, 61%);
   --Pale-Blue: hsl(236, 100%, 87%);
   /*=== Body Copy ===*/
@@ -53,7 +53,6 @@ body {
 .main-container .card {
   position: relative;
   border-radius: 15px;
-  border: 2px solid yellow;
   width: 100%;
   height: 200px;
   background-color: pink;
@@ -65,6 +64,7 @@ body {
   padding: 25px;
   border-radius: 15px;
   background-color: var(--Dark-blue);
+  cursor: pointer;
 }
 .main-container .card .inner-card .image-wrapper {
   width: 100%;
@@ -91,14 +91,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 .main-container .card .inner-card .card-header .card-title {
   font-size: 15px;
+  font-weight: 500;
 }
 .main-container .card .inner-card .card-header .card-options {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+.main-container .card .inner-card .card-hours {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.main-container .card .inner-card:hover {
+  background-color: #363b7c;
 }
 .main-container .profile-card {
   grid-area: profile-card;
@@ -109,6 +118,10 @@ body {
   position: relative;
   background-color: var(--Blue);
   padding-bottom: 35px;
+}
+.main-container .profile-card .inner-card:hover {
+  background-color: var(--Blue);
+  cursor: default;
 }
 .main-container .profile-card ul {
   list-style: none;
@@ -122,21 +135,27 @@ body {
 }
 .main-container .work-card {
   grid-area: work-card;
+  background-color: var(--Orange-red);
 }
 .main-container .play-card {
   grid-area: play-card;
+  background-color: var(--Soft-blue);
 }
 .main-container .study-card {
   grid-area: study-card;
+  background-color: var(--Light-red);
 }
 .main-container .exercise-card {
   grid-area: exercise-card;
+  background-color: var(--Lime-green);
 }
 .main-container .social-card {
   grid-area: social-card;
+  background-color: var(--Violet);
 }
 .main-container .self-care-card {
   grid-area: self-care-card;
+  background-color: var(--Soft-orange);
 }
 
 .attribution {
