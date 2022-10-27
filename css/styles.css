@@ -150,7 +150,7 @@ body {
 .main-container .profile-card ul li p:hover {
   color: inherit;
 }
-.main-container .profile-card ul li .active-p {
+.main-container .profile-card ul li .active-tf {
   color: inherit;
 }
 .main-container .work-card {
