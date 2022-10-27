@@ -92,8 +92,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [TypeError: addEventListener is not a function in JavaScript](https://bobbyhadz.com/blog/javascript-addeventlistener-is-not-a-function#:~:text=The%20%22addEventListener%20is%20not%20a,method%20(it's%20case%20sensitive).) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+
+- [Toggle Class on Elements ](https://www.w3schools.com/jsref/prop_element_classlist.asp) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

@@ -26,31 +26,26 @@ function myFunction(data) {
 let timeFrame = document.querySelectorAll('.time-frame');
 
 // For each link element
-timeFrame.forEach((ele) => {
-   // Listen for which was clicked
-   ele.addEventListener('click', (evt) => {
-      // If the one that was clicked text = condition, fire alert
-      if (ele.innerText == 'Work') {
-         alert("Work link clicked");
-         // If element text did not match condition above, fire alert below
-      } else {
-         alert(ele.innerText + " Was clicked.")
-      }
-   })
-});
+// timeFrame.forEach((ele) => {
+//    // Listen for which was clicked
+//    ele.addEventListener('click', (evt) => {
+//       // If the one that was clicked text = condition, fire alert
+//       if (ele.innerText == 'Work') {
+//          alert("Work link clicked");
+//          // If element text did not match condition above, fire alert below
+//       } else {
+//          alert(ele.innerText + " Was clicked.")
+//       }
+//    })
+// });
 
 timeFrame.forEach((ele) => {
-   // ele.classList.remove('active-tf')
-   // console.log("I ran");
+   ele.classList.remove('active-tf')
+   console.log("I ran");
    
    // Listen for which was clicked
    ele.addEventListener('click', (evt) => {
-      // If the one that was clicked text = condition, fire alert
-      if (ele.classList.contains('active-tf')) {
-         alert("Work link clicked");
-         // If element text did not match condition above, fire alert below
-      } else {
-         alert(ele.innerText + " Was clicked.")
-      }
+      
+      ele.classList.add('active-tf');
    })
 });
