@@ -73,14 +73,14 @@ body {
   margin-bottom: 25px;
 }
 .main-container .card .inner-card .image-wrapper .profile-img {
-  width: 40%;
+  width: 50%;
   height: auto;
-  border-radius: 50px;
+  border-radius: 100%;
   border: 3px solid white;
 }
 .main-container .card .inner-card h3 {
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 5px;
   color: var(--Pale-Blue);
 }
@@ -140,7 +140,6 @@ body {
   margin-bottom: 15px;
 }
 .main-container .profile-card ul li p {
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   font-size: 15px;

@@ -1,9 +1,5 @@
 // FETCH JSON FILE INFO
 
-// window.addEventListener('load', () => {
-
-   
-// })
 // const display = document.querySelector('#display-data');
    const currentHrs = document.querySelectorAll('.current-hours');
    const previousHrs = document.querySelectorAll('.previous-hours');
