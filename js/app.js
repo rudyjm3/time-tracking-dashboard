@@ -1,39 +1,48 @@
-// Create json object to get and use data
-// Once json data is returned, then run named function
-fetch('data.json')
-   .then((data) => {
-      return data.json();
-   }).then(myFunction);
+// FETCH JSON FILE INFO
 
-// json data passed into functions argument
-function myFunction(data) {
-   console.log(data);
-   const workData = data[0];
-   console.log(workData.timeframes.daily.current);
-}
+// window.addEventListener('load', () => {
 
-// Get all link elements
-const timeFrame = document.querySelectorAll('.time-frame');
+   
+// })
+// const display = document.querySelector('#display-data');
+   const currentHrs = document.querySelectorAll('.current-hours');
+   const previousHrs = document.querySelectorAll('.previous-hours');
 
-// For each link element
-timeFrame.forEach((ele) => {
-   // Listen for which was clicked
-   ele.addEventListener('click', (evt) => {
-      // If the one that was clicked text = condition, fire alert
-      // if (ele.innerText == 'Weekly') {
-      //    alert("Work link clicked");
-         // If element text did not match condition above, fire alert below
-      // } else {
-         removeActive();
-         ele.classList.add('active-tf')
-         console.log(ele.innerText + " Was clicked.")
-      // }
-   })
-});
-//##########################################
-function removeActive() {
-   timeFrame.forEach((ele) => {
-      ele.classList.remove('active-tf');
-      console.log('Remove active class function just ran.');
-   })
-};
+   const getData = async () => {
+      const res = await fetch('data.json');
+      const data = await res.json();
+      console.log(data);
+      return data
+   };
+
+   const timeFrameLinks = document.querySelectorAll('.time-frame');
+   timeFrameLinks.forEach(async timeFrameLink => {
+      let obj = await getData();
+
+      timeFrameLink.addEventListener('click', () => {
+         timeFrameLinks.forEach(items => {
+            items.classList.remove('active-tf')
+         });
+         timeFrameLink.classList.add('active-tf');
+
+         const timeFrame = timeFrameLink['dataset']['period'];
+         console.log("TimeFrame const = " + timeFrame);
+
+         currentHrs.forEach(current => {
+            const activity = obj.find(({title}) => {
+               return title === current['dataset']['activity'];
+               
+               console.log("activity const = " + activity);
+            })
+            console.log("This is what comes back for current: " + current);
+            current.textContent = activity['timeframes'][timeFrame]['current'] + 'hrs';
+         })
+
+         previousHrs.forEach( previous => {
+            const activity = obj.find(({title}) => {
+               return title === previous['dataset']['activity'];
+            })
+            previous.textContent = 'Last Week - ' + activity['timeframes'][timeFrame]['previous'] + 'hrs';
+         });
+      });
+   });

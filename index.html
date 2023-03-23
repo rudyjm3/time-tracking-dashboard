@@ -28,19 +28,20 @@
             <p class="user-name">Jeremy<br>Robson</p>
          </div>
          <ul>
-            <li><p class="time-frame">Daily</p></li>
-            <li><p class="time-frame active-tf">Weekly</p></li>
-            <li><p class="time-frame">Monthly</p></li>
+            <li><p class="time-frame" data-period="daily">Daily</p></li>
+            <li><p class="time-frame active-tf" data-period="weekly">Weekly</p></li>
+            <li><p class="time-frame" data-period="monthly">Monthly</p></li>
          </ul>
       </div>
+      <!-- CARDS -->
       <div class="work-card card">
          <div class="inner-card">
             <div class="card-header">
                <h4 class="card-title">Work</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg"  alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Work">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Work">Last Week - 0hrs</div>
          </div>
       </div>
       <div class="play-card card">
@@ -49,8 +50,8 @@
                <h4 class="card-title">Play</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg" alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Play">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Play">Last Week - 0hrs</div>
          </div>
       </div>
       <div class="study-card card">
@@ -59,8 +60,8 @@
                <h4 class="card-title">Study</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg" alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Study">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Study">Last Week - 0hrs</div>
          </div>
       </div>
       <div class="exercise-card card">
@@ -69,8 +70,8 @@
                <h4 class="card-title">Exercise</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg" alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Exercise">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Exercise">Last Week - 0hrs</div>
          </div>
       </div>
       <div class="social-card card">
@@ -79,8 +80,8 @@
                <h4 class="card-title">Social</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg" alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Social">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Social">Last Week - 0hrs</div>
          </div>
       </div>
       <div class="self-care-card card">
@@ -89,13 +90,13 @@
                <h4 class="card-title">Self Care</h4>
                <div class="card-options" title="Options"><img src="images/icon-ellipsis.svg" alt="card options button"></div>
             </div>
-            <div class="card-hours">32hrs</div>
-            <div class="last-week">Last Week -<span class="last-week-hours"> 12</span>hrs</div>
+            <div class="card-hours current-hours" data-activity="Self Care">0hrs</div>
+            <div class="last-week previous-hours" data-activity="Self Care">Last Week - 0hrs</div>
          </div>
       </div>
    </div>
  
-  
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     <span class="break-bar"> | </span>Coded by <a href="#">Rudy Mims</a>.
@@ -103,5 +104,6 @@
 
 
   <script src="js/app.js"></script>
+  
 </body>
 </html>
