@@ -1,4 +1,5 @@
 @import "_var.scss"; 
+// $media-tablet_mobile: "only screen and (max-width : 900px)";
 
 body {
    background-color: var(--Very-dark-blue);
@@ -170,3 +171,4 @@ body {
    padding: 15px 0;
    background-color: #333;
 }
+
