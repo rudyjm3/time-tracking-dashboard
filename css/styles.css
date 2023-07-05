@@ -190,4 +190,16 @@ body {
   width: 100%;
   padding: 15px 0;
   background-color: #333;
+}
+
+/* START RESPONSIVE STYLING */
+/* ================================= */
+@media screen and (max-width: 375px) {
+  /* Styles for screens that are 375px wide or less */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
