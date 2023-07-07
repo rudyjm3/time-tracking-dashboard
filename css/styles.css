@@ -194,12 +194,36 @@ body {
 
 /* START RESPONSIVE STYLING */
 /* ================================= */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   /* Styles for screens that are 375px wide or less */
+  body {
+    height: 100%;
+  }
   .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .inner-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "profile-img text-content" "profile-img text-content";
+    width: 100%;
+  }
+  .inner-card .image-wrapper {
+    grid-area: profile-img;
+    width: 100%;
+  }
+  .inner-card h3 {
+    grid-area: text-content;
+  }
+  .inner-card .user-name {
+    grid-area: text-content;
+    font-size: 1.5rem;
+  }
+  .attribution {
+    position: relative;
   }
 }/*# sourceMappingURL=styles.css.map */
